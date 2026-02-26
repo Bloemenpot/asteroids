@@ -9,5 +9,6 @@ wheels/
 # Virtual environments
 .venv
 
-# Custom
+# Logs
 game_state.jsonl
+game_events.jsonl
