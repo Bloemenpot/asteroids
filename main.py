@@ -23,6 +23,7 @@ def main():
             
         screen.fill("black")
         player.draw(screen)
+        player.update(dt)
         pygame.display.flip()
         dt = clock.tick(MAX_FPS) / 1000
 
