@@ -11,11 +11,13 @@ class Asteroid(CircleShape):
         self.position = pygame.Vector2(x, y)
         self.radius = radius
 
-    def split(self):
+    def split(self, player):
         self.kill()
         if self.radius <= ASTEROID_MIN_RADIUS:
+            log_event(f"asteroid_killed_by_{player}")
+            player.current_score += 1
             return
-        log_event("asteroid_split")
+        log_event(f"asteroid_split_by_{player}")
         angle = random.uniform(20, 50)
         ast1rot = self.velocity.rotate(angle)
         ast2rot = self.velocity.rotate(-angle)

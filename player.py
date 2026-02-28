@@ -6,6 +6,7 @@ import pygame
 class Player(CircleShape):
     rotation = 0
     shoot_cd = 0
+    current_score = 0
     def __init__(self, x, y):
         super().__init__(x, y, PLAYER_RADIUS)
 
@@ -34,7 +35,7 @@ class Player(CircleShape):
             pass
         else:
             self.shoot_cd = PLAYER_SHOOT_COOLDOWN_SECONDS
-            bullet = Shot(self.position[0], self.position[1], SHOT_RADIUS)
+            bullet = Shot(self.position[0], self.position[1], SHOT_RADIUS, self)
             bullet.velocity = pygame.Vector2(0, 1)
             rotated_vector = bullet.velocity.rotate(self.rotation)
             bullet.velocity = rotated_vector

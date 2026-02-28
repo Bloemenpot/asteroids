@@ -49,11 +49,12 @@ def main():
             if asteroid.collides_with(player):
                 log_event("player_hit")
                 print("Game over!")
+                print(f"Final Score: {player.current_score}")
                 sys.exit()
             for shot in shots:
                 if asteroid.collides_with(shot):
                     log_event("asteroid_shot")
-                    asteroid.split()
+                    asteroid.split(shot.owner) 
                     shot.kill()
         dt = clock.tick(MAX_FPS) / 1000
 
