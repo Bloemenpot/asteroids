@@ -8,7 +8,7 @@ Now remade in python for a learning experience, while following the [boot.dev](h
 - [x] Follow the base lessons
 
   Extras
-- [ ] Add a scoring system
+- [x] Add a scoring system
 - [ ] Implement multiple lives and respawning
 - [ ] Add an explosion effect for the asteroids
 - [ ] Add acceleration to the player's movement
@@ -18,3 +18,4 @@ Now remade in python for a learning experience, while following the [boot.dev](h
 - [ ] Deform the asteroids
 - [ ] Update ship hitbox to be triangular instead of circular
 - [ ] Add power-up's
+- [ ] Create main menus. With start/end screen
